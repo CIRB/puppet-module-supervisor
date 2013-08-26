@@ -1,3 +1,6 @@
+# == Class: params
+#
+#  Supervisor params
 class supervisor::params {
   case $::osfamily {
     'debian': {

@@ -1,3 +1,6 @@
+# == Class: update
+#
+#  Update supervirsor
 class supervisor::update {
   exec { 'supervisor::update':
     command     => '/usr/bin/supervisorctl update',
