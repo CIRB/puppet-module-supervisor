@@ -120,12 +120,13 @@ class supervisor(
   $supervisor_environment   = undef,
   $identifier               = undef,
   $recurse_config_dir       = false,
-  $conf_dir                 = $supervisor::params::conf_dir,
-  $conf_ext                 = $supervisor::params::conf_ext,
   $include_files            = []
-  ) {
+  )  {
   include supervisor::params
   include supervisor::update
+
+  $conf_dir                 = $supervisor::params::conf_dir
+  $conf_ext                 = $supervisor::params::conf_ext
 
   case $ensure {
     present: {
