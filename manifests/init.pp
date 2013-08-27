@@ -104,7 +104,7 @@ class supervisor(
   $service_ensure           = 'running',
   $service_enable           = true,
   $enable_inet_server       = true,
-  $inet_server_port         = '*:9000',
+  $inet_server_port         = '*:9001',
   $inet_server_user         = undef,
   $inet_server_pass         = undef,
   $logfile                  = '/var/log/supervisor/supervisord.log',
