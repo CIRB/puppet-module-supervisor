@@ -2,6 +2,7 @@
 #
 #  Supervisor params
 class supervisor::params {
+
   case $::osfamily {
     'debian': {
       $conf_file      = '/etc/supervisor/supervisord.conf'
