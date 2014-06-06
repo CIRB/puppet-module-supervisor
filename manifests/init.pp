@@ -178,7 +178,7 @@ class supervisor(
   ]:
     ensure  => $dir_ensure,
     purge   => true,
-    mode    => 775,
+    mode    => '0775',
     backup  => false,
     require => Package[$supervisor::params::package],
   }
