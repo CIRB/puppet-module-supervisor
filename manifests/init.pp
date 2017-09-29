@@ -120,7 +120,8 @@ class supervisor(
   $supervisor_environment   = undef,
   $identifier               = undef,
   $recurse_config_dir       = false,
-  $include_files            = []
+  $include_files            = [],
+  $package_install_options  = undef,
   )  {
   include supervisor::params
   include supervisor::update
@@ -161,7 +162,8 @@ class supervisor(
 
   if ! defined(Package[$supervisor::params::package]) {
     package { $supervisor::params::package:
-      ensure => $package_ensure,
+      ensure          => $package_ensure,
+      install_options => $package_install_options;
     }
   }
 
